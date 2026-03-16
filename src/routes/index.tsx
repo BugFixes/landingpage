@@ -72,37 +72,31 @@ function LandingPage() {
 					{/* Connector Line (Desktop) */}
 					<div className="absolute top-1/2 left-0 hidden h-0.5 w-full -translate-y-1/2 bg-gradient-to-r from-emerald-500/0 via-emerald-500/20 to-emerald-500/0 lg:block" />
 
-					<div className="grid gap-8 lg:grid-cols-5">
+					<div className="grid gap-8 lg:grid-cols-4">
 						{[
 							{
 								icon: Activity,
-								title: "Agents",
-								desc: "Agents capture and send logs or panic events from your services.",
+								title: "Capture",
+								desc: "Agents capture and send logs, bugs, or panic events from your services.",
 								step: "01",
-							},
-							{
-								icon: Cpu,
-								title: "Daphne",
-								desc: "Our normalization engine extracts and standardizes error data.",
-								step: "02",
-							},
-							{
-								icon: Layers,
-								title: "Deduplication",
-								desc: "Repeated failures are intelligently grouped to prevent alert fatigue.",
-								step: "03",
 							},
 							{
 								icon: FileCode2,
 								title: "Tickets",
-								desc: "Automated creation or updates in your external task systems.",
-								step: "04",
+								desc: "Automated creation of actionable engineering tickets from your crashes.",
+								step: "02",
+							},
+							{
+								icon: Cpu,
+								title: "AI Analysis",
+								desc: "Get deep AI analysis on every error with clear suggestions on how to fix it.",
+								step: "03",
 							},
 							{
 								icon: Bell,
-								title: "Notifications",
-								desc: "Alerts are routed based on precise account and escalation policies.",
-								step: "05",
+								title: "Smart Alerts",
+								desc: "We notify you if errors repeat, so your devs can respond and resolve quickly.",
+								step: "04",
 							},
 						].map((item, idx) => (
 							<div
