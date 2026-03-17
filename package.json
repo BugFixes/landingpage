@@ -10,10 +10,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
+    "tests": "bun run test && bun run check && bun run lint && bun run format && bun run build && bun run typecheck",
     "format": "biome format",
     "lint": "biome lint",
     "check": "biome check",
-    "start": "bun run server.ts"
+    "start": "bun run server.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@t3-oss/env-core": "^0.13.10",
@@ -24,7 +26,7 @@
     "@tanstack/react-router-ssr-query": "latest",
     "@tanstack/react-start": "latest",
     "@tanstack/router-plugin": "^1.132.0",
-    "bugfixes": "2.0.0",
+    "bugfixes": "2.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.577.0",
