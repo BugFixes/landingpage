@@ -27,7 +27,7 @@ bun --bun run test
 
 ## Bugfixes Integration
 
-The production server loads `bugfixes@2.0.0` from `server.ts` and uses it for:
+The production server loads `bugfixes@2.2.0` from `server.ts` and uses it for:
 
 - startup logging
 - SSR bundle load failures
