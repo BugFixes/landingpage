@@ -216,6 +216,34 @@ a:hover {
   color: #246f76;
 }
 
+.hero-cta {
+  text-decoration: none;
+}
+
+html:not(.dark) .hero-cta-primary,
+html:not(.dark) .hero-cta-primary:hover {
+  color: #ffffff;
+}
+
+html:not(.dark) .hero-cta-secondary,
+html:not(.dark) .hero-cta-secondary:hover {
+  color: var(--sea-ink);
+}
+
+.setup-cta {
+  text-decoration: none;
+}
+
+html:not(.dark) .setup-cta-primary,
+html:not(.dark) .setup-cta-primary:hover {
+  color: #083227;
+}
+
+html:not(.dark) .setup-cta-secondary,
+html:not(.dark) .setup-cta-secondary:hover {
+  color: #d1fae5;
+}
+
 code {
   font-size: 0.9em;
   border: 1px solid var(--line);

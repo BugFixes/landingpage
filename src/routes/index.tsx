@@ -94,14 +94,14 @@ function LandingPage() {
 					<div className="flex flex-wrap gap-4">
 						<a
 							href="https://docs.bugfix.es"
-							className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3.5 text-base font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400"
+							className="hero-cta hero-cta-primary inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3.5 text-base font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400"
 						>
 							Start Setup
 							<ArrowRight size={18} />
 						</a>
 						<a
 							href="https://dashboard.bugfix.es"
-							className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white/50 px-6 py-3.5 text-base font-semibold text-[var(--sea-ink)] backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white/80"
+							className="hero-cta hero-cta-secondary inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white/50 px-6 py-3.5 text-base font-semibold text-[var(--sea-ink)] backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white/80"
 						>
 							Open Dashboard
 						</a>
@@ -260,13 +260,13 @@ function LandingPage() {
 				<div className="flex flex-wrap justify-center gap-4">
 					<a
 						href="https://docs.bugfix.es"
-						className="rounded-full bg-emerald-500 px-8 py-3.5 font-bold text-emerald-950 transition hover:-translate-y-0.5 hover:bg-emerald-400"
+						className="setup-cta setup-cta-primary rounded-full bg-emerald-500 px-8 py-3.5 font-bold text-emerald-950 dark:text-emerald-100 transition hover:-translate-y-0.5 hover:bg-emerald-400"
 					>
 						Start Setup
 					</a>
 					<a
 						href="https://dashboard.bugfix.es"
-						className="rounded-full border border-emerald-500/30 bg-emerald-900/50 px-8 py-3.5 font-bold text-emerald-100 transition hover:-translate-y-0.5 hover:bg-emerald-900/80"
+						className="setup-cta setup-cta-secondary rounded-full border border-emerald-500/30 bg-emerald-900/50 px-8 py-3.5 font-bold text-emerald-100 transition hover:-translate-y-0.5 hover:bg-emerald-900/80"
 					>
 						Open Dashboard
 					</a>

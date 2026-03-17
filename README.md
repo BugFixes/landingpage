@@ -25,6 +25,31 @@ This project uses [Vitest](https://vitest.dev/) for testing. You can run the tes
 bun --bun run test
 ```
 
+## Bugfixes Integration
+
+The production server loads `bugfixes@2.0.0` from `server.ts` and uses it for:
+
+- startup logging
+- SSR bundle load failures
+- unhandled request failures
+
+`bugfixes` stays local by default. To send logs to the Bugfixes API, configure these server-side environment variables before starting the app:
+
+```bash
+BUGFIXES_AGENT_KEY=your-agent-key
+BUGFIXES_AGENT_SECRET=your-agent-secret
+```
+
+Optional variables:
+
+```bash
+BUGFIXES_AGENT_ID=your-agent-id
+BUGFIXES_SERVER=https://api.bugfix.es/v1
+BUGFIXES_LOG_LEVEL=info
+BUGFIXES_LOCAL_ONLY=true
+BUGFIXES_ICON_SKIP=true
+```
+
 ## Styling
 
 This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
@@ -68,9 +93,10 @@ pnpm dlx shadcn@latest add button
 ### Usage
 
 ```ts
+import { info } from "bugfixes";
 import { env } from "#/env";
 
-console.log(env.VITE_APP_TITLE);
+info(`App title: ${env.VITE_APP_TITLE}`);
 ```
 
 
