@@ -2,8 +2,22 @@ import { join } from "node:path";
 import { statSync, readFileSync } from "node:fs";
 import { error, info, loadConfigFromEnv, setDefaultConfig } from "bugfixes";
 
+type ServerAppModule = {
+	default: {
+		fetch(request: Request): Response | Promise<Response>;
+	};
+};
+
+declare const Bun: {
+	serve(options: {
+		port: number;
+		fetch(request: Request): Response | Promise<Response>;
+	}): unknown;
+};
+
 const port = Number(process.env.PORT || 8080);
 const clientDir = join(import.meta.dirname, "dist", "client");
+const serverEntryUrl = new URL("./dist/server/server.js", import.meta.url).href;
 const bugfixesConfig = loadConfigFromEnv();
 
 setDefaultConfig(bugfixesConfig);
@@ -35,10 +49,10 @@ function getBugfixesMode() {
 }
 
 // Import the TanStack Start server handler
-let app: Awaited<typeof import("./dist/server/server.js")>;
+let app: ServerAppModule;
 
 try {
-	app = await import("./dist/server/server.js");
+	app = (await import(serverEntryUrl)) as ServerAppModule;
 } catch (input) {
 	throw reportServerError("Failed to load the SSR bundle", input);
 }
